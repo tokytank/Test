@@ -124,7 +124,7 @@ void ATestPlayerController::DownView()
 	
 	if (player!=nullptr)
 	{
-		Cast<IDamageable>(player)->Damage(30);
+		
 		auto arm = player->GetCameraBoom();
 		if (arm->TargetArmLength < 3000.f)
 			arm->TargetArmLength += 50.f;
@@ -136,7 +136,7 @@ void ATestPlayerController::ResetView()
 {
 	TObjectPtr<ATestCharacter>player = Cast<ATestCharacter>(UGameplayStatics::GetPlayerPawn(GetWorld(), 0));
 	if (player != nullptr)
-	{
+	{	
 		auto arm = player->GetCameraBoom();
 		arm->TargetArmLength = 1400.f;
 

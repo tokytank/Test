@@ -22,6 +22,6 @@ class TEST_API IDamageable
 
 	
 public:
-	UFUNCTION(BlueprintNativeEvent)
+	UFUNCTION(BlueprintNativeEvent,BlueprintCallable)
 	 void Damage(float val);
 };
